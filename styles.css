@@ -19,10 +19,6 @@ body {
     width: 100vw;
 }
 
-body > .header {
-    border: 1px solid blue;
-}
-
 /* ------------------ sidebar ---------------- */
 .sidebar {
     grid-row: 1 / 11;
@@ -66,17 +62,89 @@ body > .header {
 }
 
 /* ----------------- header ------------------- */
-.header > * {
-    border: 1px solid blue;
-}
 
 .header {
     grid-row: 1 / 3;
     grid-column: 2 / 6;
     
     display: grid;
-    grid-template-rows: 2fr 3fr;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 4fr;
+    grid-template-columns: 3fr 2fr;
+}
+
+.header > .searchBar {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-top: 1vh;
+    padding-left: 5vw;
+}
+
+.searchBar > input {
+    flex: 1;
+    background-color: rgb(200, 200, 200);
+    border: none;
+    border-radius: 15px;
+    padding: 1vh 1vw;
+    
+    height: 25px;
+}
+
+.header > .headerIcons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3vw;
+    
+    padding-top: 1vh;
+    padding-right: 7vw;
+}
+
+.headerIcons > h1 {
+    font-size: 1.5rem;
+}
+
+.header > .welcomeMsg {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    
+    padding-left: 5vw;
+}
+
+.welcomeMsg  p {
+    font-size: .75rem;
+}
+
+.welcomeMsg h1 {
+    font-size: 1.75rem;
+}
+
+.header > .headerButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    gap: 3vw;
+    padding-right: 4vw;
+}
+
+.headerButtons > button {
+    border: none;
+    border-radius: 30px;
+    
+    background-color: var(--main-color);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    
+    width: 100px;
+    height: 40px;
+}
+
+.headerButtons > button:active {
+    border: 2px solid rgb(0, 0, 0);
 }
 
 /* ----------------- content ------------------- */
